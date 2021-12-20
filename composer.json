@@ -1,0 +1,9 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Api\\":"api/",
+            "Core\\":"Core/",
+            "Controller\\":"Controllers/"
+        }
+    }
+}
