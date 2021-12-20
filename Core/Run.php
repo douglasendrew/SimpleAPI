@@ -13,7 +13,6 @@
     // 
     // O sistema verifica se todos parametros da url é válido,
     // apos isso, verifica se o metodo informado na url existe na pasta 'Methods' -> 'Respectivo Modulo' -> 'Metodo'
-    // Caso existir, é dado um require no arquivo que está dentro da pasta 'api'.
     // 
 
     namespace Core;
