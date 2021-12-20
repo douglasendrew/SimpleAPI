@@ -3,16 +3,14 @@
     // Não mostrar os erros
     error_reporting(0);
 
-    // Definir que irá receber um json como retorno
+    // Definir header para receber um json como retorno
     header('Content-Type: application/json; charset=utf-8');
 
-    // Pegar todas funções
+    // Incluir todas funções
     require "vendor/autoload.php";
 
-    // Incluir a função de iniciar a API
-    use Core\Run;
-
     // Iniciar todos módulos da API
+    use Core\Run;
     Run::init();
 
 ?>
