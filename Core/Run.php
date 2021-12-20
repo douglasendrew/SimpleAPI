@@ -2,7 +2,7 @@
 
     // 
     // Estrutura do link:
-    // /Módulo/TipoRequisição/Ação
+    // /Módulo/TipoRequisição/Metodo
     // 
     // Exemplo:
     // Produto/get/listAll
