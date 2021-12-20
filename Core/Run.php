@@ -27,13 +27,15 @@
         {
 
             $auth = new Requisicao();
-
-            if( $auth == false )
+            
+            if( $auth->auth() == false )
             {
-                echo $auth;
+                $return = json_encode(array("error" => true, "message" => "A autenticacao na API falhou"));
+                echo $return;
                 exit;
 
             }else {
+
                 // Pegar a url atual
                 $url = $_SERVER['REQUEST_URI'];
     
