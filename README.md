@@ -2,18 +2,18 @@
 <p>Uma simples estrutura para desenvolvimento de sua API em PHP.</p>
 <hr>
 
-<h3>Instalação</h3>
+<h2>Instalação</h2>
 <p>Utilize o comando no seu terminal: <code>git clone https://github.com/douglasendrew/SimpleAPI-PHP.git</code>
   
-<h3>Dependências</h3>
+<h2>Dependências</h2>
 <p>- Composer</p>
 
-<h3>Passo-a-Passo</h3>
+<h2>Como utilizar</h2>
 <p>No arquivo <code>index.php</code> temos a inicialização da API e todos Métodos/Módulos. No caminho <code>Core/Run.php</code> é onde tem todas verificações da API, por exemplo, se o usuário forneceu os parametros de autenticação da API.</p>
 
+<h2>Iniciar</h2>
 <p>Para iniciar a API devemos utilizar o seguinte método:</p>
 
-  
 ```` 
 
 require "vendor/autoload.php";
@@ -23,3 +23,31 @@ use Core\Run;
 Run::init();
 
 ````
+
+<h2>Parametros do header</h2>
+<p>Como todas API's, temos o os parametros de Autenticação na API. No caminho <code>Core/Requisicao.php</code> podemos encontrar a função <code>auth()</code>, aqui configuramos todos parâmetros que recebemos do header.</p>
+
+```` 
+
+foreach (getallheaders() as $header => $value) {
+
+                if ($header == "Token")
+                {
+                    $this->token = $value;
+                }
+
+                if ($header == "Usuario")
+                {
+                    $this->usuario = $value;
+                }
+
+                if ($header == "Client-Id")
+                {
+                    $this->client_id = $value;
+                }
+            }
+
+````
+<p>Por padrão já está configurado os parâmetros <code>Token, Usuario, Client-Id (Obrigatórios)</code>. A resposta dessa função deve ser <code>true</code> ou <code>false</code>
+  
+  
