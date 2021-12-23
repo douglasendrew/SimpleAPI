@@ -13,12 +13,12 @@
 
 <p>Para iniciar a API devemos utilizar o seguinte método:</p>
   ````
-  <?php
+
     require "vendor/autoload.php";
   
     use Core\Run;
 
     Run::init();
-  ?>
+
   ````
   
