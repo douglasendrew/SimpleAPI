@@ -55,7 +55,7 @@ foreach (getallheaders() as $header => $value) {
 <p>O link de requisição deverá ter a seguinte estrutura: <code>www.dominio.com/Módulo/TipoRequest/Método</code>, como por exemplo: <code>www.google.com/usuarios/get/listAll</code></p>
 
 <p>A configuração dos Módulos e dos Métodos deverão estar dentro de <code>Methods/Nome_Modulo/Metodo.php</code></p>
-<div>PS: o nome do arquivo deve ser <b>exatamente</b> como aparece no link por exempo: </div>
+<div>PS: o nome do "arquivo método" deve ser <b>exatamente</b> como aparece no link por exempo: </div>
 
 <code>https://www.dominio.com/produtos/get/All</code>
 
