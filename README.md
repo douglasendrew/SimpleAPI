@@ -31,21 +31,22 @@ Run::init();
 
 foreach (getallheaders() as $header => $value) {
 
-                if ($header == "Token")
-                {
-                    $this->token = $value;
-                }
+  if ($header == "Token")
+  {
+    $this->token = $value;
+  }
 
-                if ($header == "Usuario")
-                {
-                    $this->usuario = $value;
-                }
+  if ($header == "Usuario")
+  {
+    $this->usuario = $value;
+  }
 
-                if ($header == "Client-Id")
-                {
-                    $this->client_id = $value;
-                }
-            }
+  if ($header == "Client-Id")
+  {
+    $this->client_id = $value;
+  }
+  
+}
 
 ````
 <p>Por padrão já está configurado os parâmetros <code>Token, Usuario, Client-Id (Obrigatórios)</code>. A resposta dessa função deve ser <code>true</code> ou <code>false</code>
