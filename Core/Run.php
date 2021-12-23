@@ -26,10 +26,11 @@
         {
 
             $auth = new Requisicao();
-            
+
             if( $auth->auth() == false )
             {
-                $return = json_encode(array("error" => true, "message" => "A autenticacao na API falhou"));
+
+                $return = json_encode(array("error" => true, "message" => "A autenticacao na API falhou", "response" => $auth->auth()));
                 echo $return;
                 exit;
 
