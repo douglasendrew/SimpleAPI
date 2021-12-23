@@ -16,6 +16,10 @@
   
 ```` 
 
-Look! Você pode ver minhas aspas.
+require "vendor/autoload.php";
+  
+use Core\Run;
+
+Run::init();
 
 ````
