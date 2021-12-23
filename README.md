@@ -28,7 +28,6 @@ Run::init();
 <p>Como todas API's, temos o os parametros de Autenticação na API. No caminho <code>Core/Requisicao.php</code> podemos encontrar a função <code>auth()</code>, aqui configuramos todos parâmetros que recebemos do header.</p>
 
 ```` 
-
 foreach (getallheaders() as $header => $value) {
 
   if ($header == "Token")
@@ -49,6 +48,22 @@ foreach (getallheaders() as $header => $value) {
 }
 
 ````
+
 <p>Por padrão já está configurado os parâmetros <code>Token, Usuario, Client-Id (Obrigatórios)</code>. A resposta dessa função deve ser <code>true</code> ou <code>false</code>
   
-  
+<h2>Estrutura do link</h2>
+<p>O link de requisição deverá ter a seguinte estrutura: <code>www.dominio.com/Módulo/TipoRequest/Método</code>, como por exemplo: <code>www.google.com/usuarios/get/listAll</code></p>
+
+<p>A configuração dos Módulos e dos Métodos deverão estar dentro de <code>Methods/Nome_Modulo/Metodo.php</code></p>
+<div>PS: o nome do arquivo deve ser <b>exatamente</p> como aparece no link por exempo: </div>
+
+<code>https://www.dominio.com/produtos/get/All</code>
+
+<div>Dentro da pasta <code>Methods</code> deverá estar:</div>
+
+```` 
+Methods
+    |_ produtos 
+           |_ All.php
+           |_ ...
+````
