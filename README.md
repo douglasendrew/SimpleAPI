@@ -12,6 +12,7 @@
 <p>No arquivo <code>index.php</code> temos a inicialização da API e todos Métodos/Módulos. No caminho <code>Core/Run.php</code> é onde tem todas verificações da API, por exemplo, se o usuário forneceu os parametros de autenticação da API.</p>
 
 <p>Para iniciar a API devemos utilizar o seguinte método:</p>
+  ```
   <?php
     require "vendor/autoload.php";
   
@@ -19,3 +20,4 @@
 
     Run::init();
   ?>
+  ```
