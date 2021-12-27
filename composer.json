@@ -2,7 +2,8 @@
     "autoload": {
         "psr-4": {
             "Api\\":"api/",
-            "Core\\":"Core/"
+            "Core\\":"Core/",
+            "Routes\\": "Routes/"
         }
     }
 }

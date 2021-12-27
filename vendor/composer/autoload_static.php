@@ -7,10 +7,13 @@ namespace Composer\Autoload;
 class ComposerStaticInit3d801649884e31208b8b461dbbeed135
 {
     public static $prefixLengthsPsr4 = array (
+        'R' => 
+        array (
+            'Routes\\' => 7,
+        ),
         'C' => 
         array (
             'Core\\' => 5,
-            'Controller\\' => 11,
         ),
         'A' => 
         array (
@@ -19,13 +22,13 @@ class ComposerStaticInit3d801649884e31208b8b461dbbeed135
     );
 
     public static $prefixDirsPsr4 = array (
+        'Routes\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Routes',
+        ),
         'Core\\' => 
         array (
             0 => __DIR__ . '/../..' . '/Core',
-        ),
-        'Controller\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/Controllers',
         ),
         'Api\\' => 
         array (
@@ -35,7 +38,10 @@ class ComposerStaticInit3d801649884e31208b8b461dbbeed135
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Core\\Conection' => __DIR__ . '/../..' . '/Core/Conection.php',
+        'Core\\Requisicao' => __DIR__ . '/../..' . '/Core/Requisicao.php',
         'Core\\Run' => __DIR__ . '/../..' . '/Core/Run.php',
+        'Routes\\Rotas' => __DIR__ . '/../..' . '/Routes/Rotas.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
