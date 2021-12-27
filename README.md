@@ -78,6 +78,7 @@ Methods
 <code>Rotas::set("Módulo/Método", "Requisição HTTP (Por exemplo: get, post, etc...)")</code></p>
 
 <p>Exemplo: </p>
+
 ```` 
 use Routes\Rotas;
 
