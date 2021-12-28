@@ -1,7 +1,7 @@
 <h1>SimpleAPI - PHP</h1>
 
 <div>
-<img src="https://img.shields.io/static/v1?label=PHP&message=Projeto em desenvolvimento&color=blue&style=for-the-badge&logo=PHP"/>
+<img src="https://img.shields.io/static/v1?label=PHP&message=v1.0&color=blue&style=for-the-badge&logo=PHP"/>
 </div>
 
 <p>Uma simples estrutura para desenvolvimento de sua API em PHP.</p>
