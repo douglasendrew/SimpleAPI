@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'SimpleAPI\\' => array($baseDir . '/app'),
     'Routes\\' => array($baseDir . '/Routes'),
     'Core\\' => array($baseDir . '/Core'),
     'Api\\' => array($baseDir . '/api'),

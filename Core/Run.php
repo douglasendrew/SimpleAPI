@@ -23,9 +23,10 @@
 
             if ($auth->auth() == false) {
 
-                $return = json_encode(array("error" => true, "message" => "A autenticacao na API falhou", "response" => $auth->auth()));
+                $return = json_encode(array("error" => true, "message" => "A autenticação na API falhou", "response" => $auth->auth()));
                 echo $return;
                 exit;
+                
             } else 
             {
 
