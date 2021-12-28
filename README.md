@@ -75,7 +75,7 @@ Methods
 
 <h2>Rotas</h2>
 <p>O sistema de rotas deverá ser informado em <code>api/rotas.php</code>, utilizando a seguinte função</p>
-<code>Rotas::set("Módulo/Método", "Requisição HTTP (Por exemplo: get, post, etc...)")</code></p>
+<code>Rotas::set("Módulo/Método", "Requisição HTTP (Por exemplo: get/post)")</code></p>
 
 <p>Exemplo: </p>
 
