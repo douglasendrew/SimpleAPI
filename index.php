@@ -11,7 +11,10 @@
 
     // Iniciar a API
     use Core\Run;
+    
+    // Pegar o body da requisição
+    $body = file_get_contents('php://input'); 
 
-    Run::init();
+    Run::init($body);
 
 ?>

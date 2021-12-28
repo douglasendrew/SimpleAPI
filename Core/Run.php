@@ -1,19 +1,9 @@
 <?php
 
-    // 
-    // Estrutura do link:
-    // /Módulo/TipoRequisição/Metodo
-    // 
-    // Exemplo:
-    // Produto/get/listAll
-    // 
-
-    // 
-    // Como funciona?
-    // 
-    // O sistema verifica se todos parametros da url é válido,
-    // apos isso, verifica se o metodo informado na url existe na pasta 'Methods' -> 'Respectivo Modulo' -> 'Metodo'
-    // 
+    // --
+    // Classe utilizada para inciar as funções da API.
+    // @author Douglasendrew
+    // --
 
     namespace Core;
 
@@ -23,9 +13,12 @@
     class Run
     {
 
-        public static function init()
+        public static $body;
+
+        public static function init($body)
         {
 
+            self::$body = $body;
             $auth = new Requisicao();
 
             if ($auth->auth() == false) {
@@ -62,6 +55,7 @@
                     echo json_encode($json);
                     return false;
                     exit;
+
                 } else 
                 {
 
@@ -71,6 +65,7 @@
                         echo json_encode($json);
                         return false;
                         exit;
+
                     } else 
                     {
 
@@ -80,20 +75,22 @@
                             echo json_encode($json);
                             return false;
                             exit;
+
                         } else 
                         {
 
                             // Se chegou até aqui quer dizer que a url está montada corretamente,
                             // agora só é necessário saber se os dados fornecidos são válidos.
-
                             // Verificar se o tipo de requisição é válido
                             if (strtolower($requisicao) == "post" or  strtolower($requisicao) == "get") {
 
                                 if (strtolower($tipo_requisicao) != strtolower($requisicao)) {
+                                    
                                     $json = array("error" => true, "message" => "Requisição HTTP não compatível", "response" => []);
                                     echo json_encode($json);
                                     return false;
                                     exit;
+
                                 }
 
                                 $nome_strlower = strtolower($modulo);
@@ -110,6 +107,7 @@
                                     {
 
                                         require __DIR__ . "/../Methods/" . $nome_strlower . "/" . $metodo . ".php";
+                                        
 
                                     }else
                                     {

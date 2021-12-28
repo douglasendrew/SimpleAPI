@@ -10,7 +10,9 @@
 
         public function __construct()
         {
+            
             return self::loaderAll();
+
         }
 
         public static function loaderAll()
@@ -36,8 +38,7 @@
         public static function get($route_name)
         {
 
-            $get = self::getAll();
-            $rotas = json_decode($get);
+            $rotas = json_decode(self::getAll());
 
             foreach ( $rotas as $rota )
             {
@@ -58,8 +59,10 @@
 
         public static function getAll()
         {
+
             self::loaderAll();
             return json_encode(self::$rotas);
+
         }
         
     }

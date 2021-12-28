@@ -5,5 +5,6 @@
 
     // Listagem de todas rotas da API
     Rotas::set("usuarios/novo", "POST");
+    Rotas::set("usuarios/listAll", "GET");
 
 ?>
