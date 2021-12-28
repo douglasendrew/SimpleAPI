@@ -1,7 +1,7 @@
 <h1>SimpleAPI - PHP</h1>
 
 <div>
-<img src="https://img.shields.io/static/v1?label=PHP&message=Projeto em desenvolvimento&color=blue&style=for-the-badge&logo=PHP"/>
+<img src="https://img.shields.io/static/v1?label=PHP&message=v1.0&color=blue&style=for-the-badge&logo=PHP"/>
 </div>
 
 <p>Uma simples estrutura para desenvolvimento de sua API em PHP.</p>
@@ -75,7 +75,7 @@ Methods
 
 <h2>Rotas</h2>
 <p>O sistema de rotas deverá ser informado em <code>api/rotas.php</code>, utilizando a seguinte função</p>
-<code>Rotas::set("Módulo/Método", "Requisição HTTP (Por exemplo: get, post, etc...)")</code></p>
+<code>Rotas::set("Módulo/Método", "Requisição HTTP (Por exemplo: get/post)")</code></p>
 
 <p>Exemplo: </p>
 
@@ -84,3 +84,6 @@ use Routes\Rotas;
 
 Rotas::set("usuarios/list", "GET");
 ````
+
+<br>
+<p>Documentação sendo escrita...</p>
