@@ -4,7 +4,8 @@
 
     use Core\Requisicao;
 
-    use PDO;
+    use \PDO;
+    use PDOException;
 
     class Conection
     {
@@ -17,9 +18,18 @@
 
         public static function init()
         {
-            $pdo = new PDO(self::$dbtype . ":host=". self::$host . ";dbname=". self::$dbname, self::$usuario, self::$senha);
-            return $pdo;
+            try 
+            {
+                $pdo = new \PDO(self::$dbtype . ":host=". self::$host . ";dbname=". self::$dbname, self::$usuario, self::$senha);
+                return $pdo;
+            } catch (PDOException $e)
+            {
+                echo "Não foi possível estabelecer conexão com o banco de dados\nRetorno: " . $e->getMessage();
+                exit;
+            } 
+
         }
+
 
     }
 

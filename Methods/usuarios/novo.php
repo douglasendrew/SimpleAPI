@@ -7,10 +7,7 @@
 
     use SimpleAPI\Body;
 
-    // 
     // Caso precisar recuperar o Body, somente utilziar a variável self::$body.
-    //
-
     if(Body::body(self::$body) != null)
     {
 
