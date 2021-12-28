@@ -4,7 +4,7 @@
 
     use Core\Requisicao;
 
-    use \PDO;
+    use PDO;
     use PDOException;
 
     class Conection
@@ -20,7 +20,7 @@
         {
             try 
             {
-                $pdo = new \PDO(self::$dbtype . ":host=". self::$host . ";dbname=". self::$dbname, self::$usuario, self::$senha);
+                $pdo = new PDO(self::$dbtype . ":host=". self::$host . ";dbname=". self::$dbname, self::$usuario, self::$senha);
                 return $pdo;
             } catch (PDOException $e)
             {
