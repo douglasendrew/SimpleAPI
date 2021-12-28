@@ -1,14 +1,14 @@
-<?php 
+<?php
 
-   /**
-   * Classe para tratar o body das requisições 
-   * @author douglasendrew
-   */
+    /**
+     * Classe para tratar o body das requisições 
+     * @author douglasendrew
+     */
 
-   namespace SimpleAPI;
+    namespace SimpleAPI;
 
-   class Body 
-   {
+    class Body
+    {
 
         private static $body;
 
@@ -19,16 +19,22 @@
 
             self::$body = urldecode($body);
 
-            $hh = explode("&", self::$body);
+            if (!empty(self::$body)) {
 
-            for ($a = 0; $a < count($hh); $a++)
+                $hh = explode("&", self::$body);
+
+                for ($a = 0; $a < count($hh); $a++) {
+                    $tt = explode("=", $hh[$a]);
+                    $allBody[$tt[0]] = $tt[1];
+                }
+
+                return $allBody;
+
+            }else 
             {
-                $tt = explode("=", $hh[$a]);
-                $allBody[$tt[0]] = $tt[1];
+                return null;
             }
-
-            return $allBody;
 
         }
 
-   }
+    }
