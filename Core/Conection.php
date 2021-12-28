@@ -20,16 +20,19 @@
         {
             try 
             {
+                
                 $pdo = new PDO(self::$dbtype . ":host=". self::$host . ";dbname=". self::$dbname, self::$usuario, self::$senha);
                 return $pdo;
+
             } catch (PDOException $e)
             {
+
                 echo "Não foi possível estabelecer conexão com o banco de dados\nRetorno: " . $e->getMessage();
                 exit;
+
             } 
 
         }
-
 
     }
 
