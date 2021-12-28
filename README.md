@@ -84,3 +84,6 @@ use Routes\Rotas;
 
 Rotas::set("usuarios/list", "GET");
 ````
+
+<br>
+<p>Documentação sendo escrita...</p>
