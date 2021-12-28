@@ -1,9 +1,9 @@
 <?php
 
-    // --
-    // Classe utilizada para inciar as funções da API.
-    // @author Douglasendrew
-    // --
+    /**
+    * Classe utilizada para inciar as funções da API..
+    * @author Douglasendrew
+    */
 
     namespace Core;
 
@@ -85,7 +85,7 @@
                             if (strtolower($requisicao) == "post" or  strtolower($requisicao) == "get") {
 
                                 if (strtolower($tipo_requisicao) != strtolower($requisicao)) {
-                                    
+
                                     $json = array("error" => true, "message" => "Requisição HTTP não compatível", "response" => []);
                                     echo json_encode($json);
                                     return false;
